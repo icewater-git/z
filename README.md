@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Tone
 
 Typography-first Astro blog starter with quiet defaults, MDX support, dark mode,
@@ -125,3 +126,6 @@ No analytics run by default. To opt into Vercel Analytics, set
 
 Tone source code is MIT licensed. Bundled sample images and project marks are
 documented in `LICENSE`.
+=======
+# z
+>>>>>>> 5742c889cb23773a83e7fa0477853a76c8207d8b
