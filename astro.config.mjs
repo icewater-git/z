@@ -28,8 +28,8 @@ function withoutConfiguredBase(pathname) {
 }
 
 export default defineConfig({
-  site: 'https://icewater-git.github.io',
-  base: '/z',
+  site: 'https://z.ice68.cn/',
+  base: '',
 
   integrations: [
     expressiveCode(toneExpressiveCodeOptions),
