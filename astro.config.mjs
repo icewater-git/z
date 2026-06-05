@@ -10,6 +10,8 @@ import rehypeSlug from 'rehype-slug';
 import config from './astro-theme-config.ts';
 import { toneExpressiveCodeOptions } from './src/config/expressive-code.ts';
 
+import vercel from '@astrojs/vercel';
+
 // https://astro.build/config
 const sitemapExcludedPaths = new Set(['/search/']);
 const configuredSite = process.env.ASTRO_SITE_URL || config.site.url;
@@ -28,6 +30,7 @@ function withoutConfiguredBase(pathname) {
 export default defineConfig({
   site: 'https://icewater-git.github.io',
   base: '/z',
+
   integrations: [
     expressiveCode(toneExpressiveCodeOptions),
     mdx(),
@@ -35,6 +38,7 @@ export default defineConfig({
       filter: (page) => !sitemapExcludedPaths.has(withoutConfiguredBase(new URL(page).pathname)),
     }),
   ],
+
   build: {
     inlineStylesheets: 'always',
   },
@@ -52,4 +56,6 @@ export default defineConfig({
       ],
     ],
   },
+
+  adapter: vercel()
 });
